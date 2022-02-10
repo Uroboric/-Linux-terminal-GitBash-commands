@@ -1,0 +1,121 @@
+﻿1)Посмотреть где я
+pwd
+
+2)Создать папку
+mkdir 123
+
+3) Зайти в папку
+cd 123
+
+4) Создать 3 папки
+ mkdir folder1 folder2 folder3
+
+5) Зайти в любоую папку
+cd folder2
+
+6) Создать 5 файлов (3 txt, 2 json)
+ touch 1.txt 2.txt 3.txt file1.json file2.json
+
+7) Создать 3 папки
+mkdir papka1 papka2 papka3
+
+8. Вывести список содержимого папки
+ls -la
+
+9) + Открыть любой txt файл
+vim 2.txt
+10) + написать туда что-нибудь, любой текст.
+i — переход в режим редактирования
+line
+line1
+line2
+line3
+line4
+LINE
+Line
+
+11) + сохранить и выйти.
+esc — выйти из режима редактирования
+:wq — записать изменения и выйти из vim
+
+12) Выйти из папки на уровень выше
+cd ..
+
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+ mv 2.txt file1.json papka1
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp 1.txt file2.json papka1
+
+15) Найти файл по имени
+ find . -name 1.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+ tail -f 1.txt | grep line 
+открыть файл 1.txt в блокноте
+ввести текст,сохранить и закрыть.
+tail -f 2.txt | grep --tail: 2.txt: file truncated
+ddgdsdgadfhsxthsfgjhsfgjsfgjsytjsyjtyjghfddghjkhgfdfhjline like faulure nature
+ 
+17) вывести несколько первых строк из текстового файла
+head -2 2.txt
+line like faulure nature
+beach tone bone phone
+
+18) вывести несколько последних строк из текстового файла
+tail -3 1.txt
+line4
+LINE
+Line
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less 1.txt
+q для выхода из редактора less
+
+20) вывести дату и время
+date
+Thu Feb 10 00:30:23 RTZ 2022
+_______________________
+
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   237  100   237    0     0   1834      0 --:--:-- --:--:-- --:--:--  1837{"Intro":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)","result":["Your_String","Your_number"]}}
+
+curl http://162.55.220.72:5005/get_method?name=andrey&age=23","result":["Andrey","23"]}}
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+vim script.sh
+
+mkdir 123
+cd 123
+mkdir folder1 folder2 folder3
+cd folder2
+touch 1.txt 2.txt 3.txt file1.json file2.json
+mkdir papka1 papka2 papka3
+ls -la
+mv 2.txt file1.json papka1
+
+нажимаем esc, shift+z, shift+z
+
+./script.sh
+total 4
+drwxr-xr-x 1 Andrey 197121 0 Feb 10 01:49 .
+drwxr-xr-x 1 Andrey 197121 0 Feb 10 01:49 ..
+-rw-r--r-- 1 Andrey 197121 0 Feb 10 01:49 1.txt
+-rw-r--r-- 1 Andrey 197121 0 Feb 10 01:49 2.txt
+-rw-r--r-- 1 Andrey 197121 0 Feb 10 01:49 3.txt
+-rw-r--r-- 1 Andrey 197121 0 Feb 10 01:49 file1.json
+-rw-r--r-- 1 Andrey 197121 0 Feb 10 01:49 file2.json
+drwxr-xr-x 1 Andrey 197121 0 Feb 10 01:49 papka1
+drwxr-xr-x 1 Andrey 197121 0 Feb 10 01:49 papka2
+drwxr-xr-x 1 Andrey 197121 0 Feb 10 01:49 papka3
+
+
+
